@@ -14,5 +14,5 @@ A. Dubovik YPraktikum Sprint 15
 #### To run production version on localhost:3000 run:
     npm run start
 ### [Source code](https://github.com/dubovik02/mesto-deploy)
-### [IP](130.193.36.65)
-### [Web-site](mesto2020.tk)
+### Test the server:
+<https://mesto2020.tk>, IP-address: 130.193.36.65
