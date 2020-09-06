@@ -53,7 +53,6 @@ userSchema.statics.findUserByEmail = function findByEmail(email) {
       }
       return null;
     })
-    // .catch(() => Promise.reject(new Error('Ошибка сервера при получении данных пользователя')));
     .catch(() => Promise.reject(new ServerError()));
 };
 
@@ -65,16 +64,13 @@ userSchema.statics.findUserByCredentials = function findByCredentials(email, pas
         return bcrypt.compare(password, user.password)
           .then((matched) => {
             if (!matched) {
-              // return Promise.reject(new Error('Некорректные имя пользователя или пароль'));
               return Promise.reject(new UnauthorizedError('Некорректные имя пользователя или пароль'));
             }
             return user;
           });
       }
-      // return Promise.reject(new Error('Некорректные имя пользователя или пароль'));
       return Promise.reject(new UnauthorizedError('Некорректные имя пользователя или пароль'));
     })
-    // .catch(() => Promise.reject(new Error('логин-пароль')));
     .catch((err) => Promise.reject(err));
 };
 

@@ -5,7 +5,7 @@ A. Dubovik YPraktikum Sprint 15
 #### Version 0.0.1
 ## Quick start: 
 #### To clone repository use:
-    git clone https://github.com/dubovik02/mesto-security
+    git clone https://github.com/dubovik02/mesto-deploy
 #### Install [node.js](https://nodejs.org/en/download/) 
 #### Install requires NPMs in a dir which contains the project.
 #### Install MongoDB database engine. Connecting string://localhost:27017/mestodb.
@@ -13,4 +13,6 @@ A. Dubovik YPraktikum Sprint 15
     npm run dev
 #### To run production version on localhost:3000 run:
     npm run start
-### [Source code](https://github.com/dubovik02/mesto-security)
+### [Source code](https://github.com/dubovik02/mesto-deploy)
+### [IP](130.193.36.65)
+### [Web-site](mesto2020.tk)

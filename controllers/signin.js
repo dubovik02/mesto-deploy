@@ -10,7 +10,6 @@ module.exports.login = (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    // return res.status(401).send({ message: 'Не задан email или пароль' });
     next(new UnauthorizedError('Не задан email или пароль'));
     return;
   }
@@ -21,7 +20,4 @@ module.exports.login = (req, res, next) => {
       res.cookie('jwt', token, { maxAge: 3600000 * 24 * 7, httpOnly: true }).end();
     })
     .catch(next);
-  // .catch((err) => {
-  //   res.status(401).send({ message: err.message });
-  // });
 };

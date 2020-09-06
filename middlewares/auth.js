@@ -9,7 +9,6 @@ module.exports = (req, res, next) => {
   const error = new UnauthorizedError('Некорректный ключ для авторизации');
 
   if (!authorization || !authorization.startsWith('Bearer ')) {
-    // return res.status(401).send({ message: 'Некорректный ключ для авторизации' });
     next(error);
   }
 

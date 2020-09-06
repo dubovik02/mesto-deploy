@@ -32,6 +32,12 @@ app.use(helmet());
 
 app.use(requestLogger);
 
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 app.use('/signin', loginRouter);
 app.use('/signup', createUserRouter);
 app.use(auth);
@@ -39,7 +45,6 @@ app.use('/users', usersRouter);
 app.use('/cards', cardsRouter);
 
 app.use((req, res, next) => {
-  // res.status(404).send({ message: 'Запрашиваемый ресурс не найден' });
   next(new NotFoundError('Запрашиваемый ресурс не найден'));
 });
 
