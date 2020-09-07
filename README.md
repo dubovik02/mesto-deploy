@@ -15,4 +15,4 @@ A. Dubovik YPraktikum Sprint 15
     npm run start
 ### [Source code](https://github.com/dubovik02/mesto-deploy)
 ### Test the server:
-<https://mesto2020.tk>, IP-address: 130.193.36.65
+<https://mesto2020.tk>, server IP-address: 130.193.36.65
